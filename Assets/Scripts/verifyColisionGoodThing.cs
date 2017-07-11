@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class verifyColisionGoodThing : MonoBehaviour {
+public class VerifyColisionGoodThing : MonoBehaviour {
 
     public Canvas OptionScreen;
     // Use this for initialization
