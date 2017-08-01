@@ -5,18 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    public void LoadLevel() 
-    {
-        SceneManager.LoadScene("Levels");
-    }
+	public void LoadMenu(){
+		SceneManager.LoadScene("Menu");
+	}
 
-    public void LoadDrugStoreLevel()
-    {
-        SceneManager.LoadScene("Game");
-    }
+	public void LoadLevelOne() {
+		SceneManager.LoadScene ("Level 1 Farmacia");
+	}
 
-    public void LoadStart()
-    {
-        SceneManager.LoadScene("Start");
-    }
+	public void LoadLevelTwo() {
+		SceneManager.LoadScene ("Level 2 Supermercado");
+	}
+
+	public void LoadLevelThree() {
+		SceneManager.LoadScene ("Level 3 Academia");
+	}
+
+	public void QuitGame(){
+		Debug.Log ("I want to quit the game!");
+	}
+		
 }

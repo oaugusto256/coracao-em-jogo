@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f59699f1b3b6909479763c880ebe5cce
+timeCreated: 1499176179
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 3Dventure
+  fontNames:
+  - 3Dventure
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
