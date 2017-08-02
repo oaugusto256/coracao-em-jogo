@@ -27,13 +27,13 @@ public class PlayerControl : MonoBehaviour {
 		}
 	}
 		
-	void moveRight (float step) {
+	public void moveRight (float step) {
 		lastLeft = false;
 		transform.position = Vector3.MoveTowards(transform.position, transform.position - Vector3.forward * lineWidth, step);
 
 	}
 
-	void moveLeft (float step){
+	public void moveLeft (float step){
 		lastRight = false;
 		transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.forward * lineWidth, step);
 	}
