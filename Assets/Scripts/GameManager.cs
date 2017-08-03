@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour {
 	bool gameIsPaused = false;
 	public Canvas PauseUI;
 	public Canvas InstructionsUI;
-    public AudioSource Run;
 
 	void Start() {
 		Time.timeScale = 1;
@@ -17,13 +16,13 @@ public class GameManager : MonoBehaviour {
 
 	void Update() {
 		if (Input.GetKeyDown("p") && (gameIsPaused == false)) {
-            Run.Stop();
+            // Run.Stop();
             Time.timeScale = 0;
             PauseUI.gameObject.SetActive (true);
 			gameIsPaused = true;
 
 		} else if (Input.GetKeyDown("p") && (gameIsPaused == true)) {
-            Run.Play();
+            // Run.Play();
             gameIsPaused = false;
 			PauseUI.gameObject.SetActive (false);
 			Time.timeScale = 1;

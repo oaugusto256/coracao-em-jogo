@@ -12,7 +12,6 @@ public class PointsManager : MonoBehaviour {
     public float curHealth = 0f;
     public GameObject HealthBar;
     public Canvas GameOverUI;
-    public AudioSource Run;
     public AudioSource hitSphere;
     public AudioSource hitCube;
     int points;
@@ -31,20 +30,19 @@ public class PointsManager : MonoBehaviour {
 	{
         if (collision.gameObject.name == "Cube(Clone)") {
             points += 10;
-            hitSphere.Play();
+            /// hitSphere.Play();
         }
 		
 
         if (collision.gameObject.name == "Sphere(Clone)") {
             curHealth -= 20;
-            hitCube.Play();
+            // hitCube.Play();
             float calcHealth = curHealth / maxHealth;
             setHealthBar(calcHealth);
 
             if (calcHealth == 0)
             {
                 Time.timeScale = 0;
-                Run.Stop();
                 textPoints.gameObject.SetActive(false);
                 GameOverUI.gameObject.SetActive(true);
                 totalPoints.text = "TOTAL POINTS: " + points;

@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	public void QuitGame(){
-		Debug.Log ("I want to quit the game!");
+		Debug.Log ("Fechando o jogo...");
 	}
 		
 }
