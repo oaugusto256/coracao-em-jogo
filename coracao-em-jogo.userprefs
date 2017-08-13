@@ -1,30 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PointsManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameManager.cs" Line="8" Column="1" />
-      <File FileName="Assets\Scripts\LevelManager.cs" Line="25" Column="33" />
-      <File FileName="Assets\Scripts\PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PointsManager.cs" Line="31" Column="58" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelManager.cs" Line="27" Column="28" />
+      <File FileName="Assets\Scripts\PointsManager.cs" Line="27" Column="5" />
+      <File FileName="Assets\Scripts\LoadSave.cs" Line="25" Column="14" />
+      <File FileName="Assets\Scripts\ObjectPool.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="coracao-em-jogo" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="GameManager.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="coracao-em-jogo" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

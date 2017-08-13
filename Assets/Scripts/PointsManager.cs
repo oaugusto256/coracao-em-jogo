@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PointsManager : MonoBehaviour {
 
@@ -12,14 +13,18 @@ public class PointsManager : MonoBehaviour {
     public float curHealth = 0f;
     public GameObject HealthBar;
     public Canvas GameOverUI;
+	public Canvas LevelCompleteUI;
     public AudioSource hitSphere;
     public AudioSource hitCube;
+	string NomeDaFase;
     int points;
 
 	void Start () {
         curHealth = maxHealth;
 		textPoints.text = "POINTS: ";
 		points = 0;
+		NomeDaFase = SceneManager.GetActiveScene ().name;
+		//PlayerPrefs.DeleteAll ();
 	}
 
 	void Update () {
@@ -30,9 +35,14 @@ public class PointsManager : MonoBehaviour {
 	{
         if (collision.gameObject.name == "Cube(Clone)") {
             points += 10;
-            /// hitSphere.Play();
+           // hitSphere.Play();
         }
-		
+
+		if (points == 100) {
+			Time.timeScale = 0;
+			PlayerPrefs.SetInt(""+NomeDaFase, 1  );
+			LevelCompleteUI.gameObject.SetActive (true);
+		}
 
         if (collision.gameObject.name == "Sphere(Clone)") {
             curHealth -= 20;

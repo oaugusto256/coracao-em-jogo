@@ -9,16 +9,24 @@ public class LevelManager : MonoBehaviour {
 		SceneManager.LoadScene("Menu");
 	}
 
+	public void LoadSelecionarFase(){
+		SceneManager.LoadScene("Selecao de Fases");
+	}
+
 	public void LoadLevelOne() {
 		SceneManager.LoadScene ("Level 1 Farmacia");
 	}
 
 	public void LoadLevelTwo() {
-		SceneManager.LoadScene ("Level 2 Supermercado");
+		if (PlayerPrefs.HasKey("Level 1 Farmacia")) {
+			SceneManager.LoadScene ("Level 2 Supermercado");
+		}
 	}
 
 	public void LoadLevelThree() {
-		SceneManager.LoadScene ("Level 3 Academia");
+		if (PlayerPrefs.HasKey ("Level 2 Supermercado")) {
+			SceneManager.LoadScene ("Level 3 Academia");
+		}	
 	}
 
 	public void QuitGame(){
