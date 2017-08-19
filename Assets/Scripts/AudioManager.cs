@@ -11,12 +11,16 @@ public class AudioManager : MonoBehaviour {
 			
 			DontDestroyOnLoad (gameObject);
 			AudioBegin = true;
-		} 
+		} else {
+		
+			Destroy (this.gameObject);
+
+		}
 	}
 	void Update () {
 		if(Application.loadedLevelName == "Level 1 Farmacia")
 		{
-			
+			AudioBegin = false;
 			Destroy (this.gameObject);
 		}
 	}
