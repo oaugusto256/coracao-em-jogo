@@ -30,25 +30,25 @@ public class PlayerControl : MonoBehaviour {
 		}
 
 		if (stepLeft == true) {
+			stepLeft = false;
 			if (!lastLeft)
 				moveLeft(step);
 		}
 
 		if (stepRight == true) {
+			stepRight = false;
 			if (!lastRight)
 				moveRight (step);
 		}
 	}
 		
 	public void moveRight (float step) {
-		stepRight = false;
 		lastLeft = false;
 		transform.position = Vector3.MoveTowards(transform.position, transform.position - Vector3.forward * lineWidth, step);
 
 	}
 
 	public void moveLeft (float step){
-		stepLeft = false;
 		lastRight = false;
 		transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.forward * lineWidth, step);
 	}
