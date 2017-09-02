@@ -70,8 +70,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
   controlID: 50
 --- !u!114 &4
@@ -92,8 +92,8 @@ MonoBehaviour:
     y: 0
     width: 759
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -452,19 +452,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Models/UI
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Models/UI
+  - Assets
   m_LastFoldersGridSize: 96
-  m_LastProjectPath: D:\Projetos\unity\coracao-em-jogo
+  m_LastProjectPath: P:\Desenvolvimento\coracao-em-jogo
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 86270000
-    m_LastClickedID: 10118
-    m_ExpandedIDs: 00000000282700002c28000058290000ffffff7f
+    m_SelectedIDs: ca240000
+    m_LastClickedID: 9418
+    m_ExpandedIDs: 00000000ca240000fa2500006827000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -492,7 +492,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000282700002c28000058290000
+    m_ExpandedIDs: 00000000ca240000fa25000068270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,7 +520,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000e2260000
+    m_ExpandedInstanceIDs: c6230000e226000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -573,7 +573,7 @@ MonoBehaviour:
     y: 92
     width: 757
     height: 926
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 60}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 451
@@ -608,23 +608,23 @@ MonoBehaviour:
     height: 530
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: f8b3faffecb5faffac92feff8694feffe895feffa0ddfeff7cd5ffffdad9ffffb8daffff44dfffff000000000234000080340000544200006652000024d6000038d70000
+    m_SelectedIDs: a2960000
+    m_LastClickedID: 38562
+    m_ExpandedIDs: b259faff0872faff30bbfdffe8fbffff00000000522a0000e22a00001e94000090950000f2950000729700003c270100e42f0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ParabensText
-      m_OriginalName: ParabensText
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 55216
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -660,14 +660,14 @@ MonoBehaviour:
     width: 868
     height: 530
   m_SceneLighting: 1
-  lastFramingTime: 4544.217803563915
+  lastFramingTime: 5945.307932027282
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 405.13293, y: 242.96176, z: 0}
+    m_Target: {x: 429.66, y: 238.055, z: 0}
     speed: 2
-    m_Value: {x: 405.13293, y: 242.96176, z: 0}
+    m_Value: {x: 429.66, y: 238.055, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -694,14 +694,14 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 635.2553
+    m_Target: 1473.8131
     speed: 2
-    m_Value: 635.2553
+    m_Value: 1473.8131
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
-  m_LastSceneViewRotation: {x: -0.025696712, y: -0.89221585, z: 0.44796348, w: -0.051180538}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -730,6 +730,6 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 618
-    width: 1566
-    height: 400
+    y: 643
+    width: 1159
+    height: 375

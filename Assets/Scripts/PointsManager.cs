@@ -12,6 +12,7 @@ public class PointsManager : MonoBehaviour {
     public int maxHealth = 100;
     public float curHealth = 0f;
     public GameObject HealthBar;
+	public GameObject Heart;
     public Canvas GameOverUI;
 	public Canvas LevelCompleteUI;
     public AudioSource hitSphere;
@@ -35,12 +36,16 @@ public class PointsManager : MonoBehaviour {
 	{
         if (collision.gameObject.name == "Cube(Clone)") {
             points += 10;
+			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
+			heartControl.velocityBeat /= 0.75f;
            // hitSphere.Play();
         }
 
 		if (points == 100) {
 			Time.timeScale = 0;
 			PlayerPrefs.SetInt(""+NomeDaFase, 1  );
+			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
+			heartControl.velocityBeat = 0;
 			LevelCompleteUI.gameObject.SetActive (true);
 		}
 
