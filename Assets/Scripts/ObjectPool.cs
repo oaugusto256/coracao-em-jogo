@@ -7,13 +7,15 @@ public class ObjectPool : MonoBehaviour {
 	public GameObject[] objectList;
 	public GameObject objectToPool;
 	public int poolSize;
-
+	int spawnCycle;
 	float timeElapsed = 0f;
-	float spawnCycle = Random.Range(1, 4);
+
 
 	void Start () 
 	{
 		Vector3 position = transform.position;
+
+		spawnCycle = Random.Range(1, 4);
 
 		objectList = new GameObject[poolSize];
 		for (int i = 0; i < poolSize; i++) 
@@ -36,7 +38,7 @@ public class ObjectPool : MonoBehaviour {
 	}
 
 	public void activateObject() 
-	{
+	{ 
 		for (int i = 0; i < poolSize; i++) 
 		{
 			if (!objectList [i].activeInHierarchy) 
