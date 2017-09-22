@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -70,8 +70,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 683, y: 321}
+  m_MaxSize: {x: 12008, y: 8021}
   vertical: 0
   controlID: 11
 --- !u!114 &4
@@ -142,14 +142,14 @@ MonoBehaviour:
     y: 596
     width: 1365
     height: 351
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 15}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +171,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -234,8 +234,8 @@ MonoBehaviour:
     y: 0
     width: 1365
     height: 947
-  m_MinSize: {x: 406, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 406, y: 321}
+  m_MaxSize: {x: 8006, y: 8021}
   vertical: 1
   controlID: 12
 --- !u!114 &11
@@ -444,19 +444,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Modelos3D/Testosterone
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Modelos3D/Testosterone
+  - Assets/Scripts
   m_LastFoldersGridSize: 96
   m_LastProjectPath: P:\Desenvolvimento\coracao-em-jogo
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 43}
-    m_SelectedIDs: 30270000
-    m_LastClickedID: 10032
-    m_ExpandedIDs: 0000000012250000542600003027000080270000822a000000ca9a3bffffff7f
+    m_SelectedIDs: 66250000
+    m_LastClickedID: 9574
+    m_ExpandedIDs: 0000000012250000542600003027000080270000ba2a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -484,7 +484,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000012250000542600003027000080270000822a0000
+    m_ExpandedIDs: 0000000012250000542600003027000080270000ba2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -509,9 +509,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: b4290000
+    m_LastClickedInstanceID: 10676
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000e226000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -600,9 +600,9 @@ MonoBehaviour:
     height: 575
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d66ffaff
-    m_LastClickedID: -364586
-    m_ExpandedIDs: 924bfafffe4cfaff0eeafaff0230ffffdefbffff0000000092280000
+    m_SelectedIDs: ac280000
+    m_LastClickedID: 10412
+    m_ExpandedIDs: 2a25faffdefbffff00000000fc2700001a280000a8290000c4290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -652,14 +652,14 @@ MonoBehaviour:
     width: 956
     height: 575
   m_SceneLighting: 1
-  lastFramingTime: 3240.665540984376
-  m_2DMode: 0
+  lastFramingTime: 1343.7264819688717
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 15.83651, y: -3.062584, z: 5.6040573}
+    m_Target: {x: 433.67883, y: 279.07666, z: -5.332023}
     speed: 2
-    m_Value: {x: 15.83651, y: -3.062584, z: 5.6040573}
+    m_Value: {x: 433.67883, y: 279.07666, z: -5.332023}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -670,31 +670,31 @@ MonoBehaviour:
     showImageEffects: 0
   grid:
     xGrid:
-      m_Target: 1
+      m_Target: 0
       speed: 2
-      m_Value: 1
+      m_Value: 0
     yGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
     zGrid:
-      m_Target: 0
+      m_Target: 1
       speed: 2
-      m_Value: 0
+      m_Value: 1
   m_Rotation:
-    m_Target: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.8984451
+    m_Target: 561.09546
     speed: 2
-    m_Value: 1.8984451
+    m_Value: 561.09546
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
-  m_LastSceneViewOrtho: 0
+  m_LastSceneViewRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LastSceneViewOrtho: 1
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}

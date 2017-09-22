@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Parallax.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\PointsManager.cs" />
+     <Compile Include="Assets\Scripts\TimerManager.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>P:/Desenvolvimento/coracao-em-jogo/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

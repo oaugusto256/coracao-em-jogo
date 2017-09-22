@@ -9,18 +9,24 @@ public class PointsManager : MonoBehaviour {
     bool gameIsPaused = false;
     public Text textPoints;
     public Text totalPoints;
+	public Text totalTimeUI;
+	public Text timeUI;
     public int maxHealth = 100;
     public float curHealth = 0f;
     public GameObject HealthBar;
 	public GameObject Heart;
+	public GameObject UIManager;
     public Canvas GameOverUI;
 	public Canvas LevelCompleteUI;
     public AudioSource hitSphere;
     public AudioSource hitCube;
+	public int qntWaterbottle; 
 	string NomeDaFase;
-    int points;
+	int countWaterbottle;
+	int points;
 
-	void Start () {
+	void Start () 
+	{
         curHealth = maxHealth;
 		textPoints.text = "POINTS: ";
 		points = 0;
@@ -28,20 +34,22 @@ public class PointsManager : MonoBehaviour {
 		//PlayerPrefs.DeleteAll ();
 	}
 
-	void Update () {
+	void Update () 
+	{
 		textPoints.text = "POINTS: " + points;
 	}
 
 	void OnCollisionEnter(Collision collision)
 	{
-        if (collision.gameObject.name == "Cube(Clone)") {
+		if (collision.gameObject.name == "Water(Clone)") {
             points += 10;
-			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
-			heartControl.velocityBeat /= 0.75f;
+			countWaterbottle += 1;
+			//HeartControl heartControl = Heart.GetComponent<HeartControl> ();
+			//heartControl.velocityBeat /= 0.75f;
            // hitSphere.Play();
         }
 
-		if (points == 100) {
+		if ( qntWaterbottle == countWaterbottle ) {
 			Time.timeScale = 0;
 			PlayerPrefs.SetInt(""+NomeDaFase, 1  );
 			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
@@ -49,7 +57,7 @@ public class PointsManager : MonoBehaviour {
 			LevelCompleteUI.gameObject.SetActive (true);
 		}
 
-        if (collision.gameObject.name == "Sphere(Clone)") {
+		if (collision.gameObject.name == "Testosterone(Clone)") {
             curHealth -= 20;
             // hitCube.Play();
             float calcHealth = curHealth / maxHealth;
@@ -58,9 +66,14 @@ public class PointsManager : MonoBehaviour {
             if (calcHealth == 0)
             {
                 Time.timeScale = 0;
+				HeartControl heartControl = Heart.GetComponent<HeartControl> ();
+				heartControl.velocityBeat = 0;
+				timeUI.gameObject.SetActive (false);
                 textPoints.gameObject.SetActive(false);
                 GameOverUI.gameObject.SetActive(true);
                 totalPoints.text = "TOTAL POINTS: " + points;
+				TimerManager timeManager = UIManager.GetComponent<TimerManager> ();
+				totalTimeUI.text = "TEMPO: " + timeManager.timeString;
             }
         }        
      }
@@ -69,4 +82,5 @@ public class PointsManager : MonoBehaviour {
     {
         HealthBar.transform.localScale = new Vector3(myHealth, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
     }
+
 }
