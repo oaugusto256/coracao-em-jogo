@@ -44,7 +44,7 @@ public class ObjectPool : MonoBehaviour {
 			if (!objectList [i].activeInHierarchy) 
 			{
 				objectList [i].SetActive (true);
-				return;
+				break;
 			}
 		}
 	}

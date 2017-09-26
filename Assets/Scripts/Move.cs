@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Move : MonoBehaviour 
 {
-	float speed;
+	int speed;
 	protected Vector3 movement;
 	bool gameIsPaused = false;
 
 	void Update ()
 	{
-		speed = Random.Range (5, 30);
+		speed = Random.Range (25,30);
 
 		if (Input.GetKeyDown ("p") && (gameIsPaused == false)) {
 			Time.timeScale = 0;
