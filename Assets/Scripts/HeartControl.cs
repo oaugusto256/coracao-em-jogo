@@ -5,7 +5,7 @@ using UnityEngine;
 public class HeartControl : MonoBehaviour {
 
 	public GameObject Heart;
-	public float velocityBeat = 0.5f;
+	public float velocityBeat;
 	public float sizeHeart = 100;
 	public float minSizeHeart = 50;
 	public float maxSizeHeart = 100;

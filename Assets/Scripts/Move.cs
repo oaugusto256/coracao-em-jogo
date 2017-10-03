@@ -10,7 +10,7 @@ public class Move : MonoBehaviour
 
 	void Update ()
 	{
-		speed = Random.Range (25,30);
+		speed = Random.Range (5,20);
 
 		if (Input.GetKeyDown ("p") && (gameIsPaused == false)) {
 			Time.timeScale = 0;
