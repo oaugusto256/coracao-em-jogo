@@ -68,6 +68,7 @@ public class PointsManager : MonoBehaviour {
 
 			TimerManager timeManager = UIManager.GetComponent<TimerManager> ();
 			totalTimeUILComplete.text = "TEMPO: " + timeManager.timeString;
+			string timePlayer = timeManager.timeString;
 
 			pointsUILComplete.text = "PONTOS: " + points;
 
@@ -76,6 +77,8 @@ public class PointsManager : MonoBehaviour {
 
 			int totalPoints = points * bonus;
 			totalPointsUILComplete.text = "TOTAL: " + totalPoints;
+
+			saveTimeAndPoints (totalPoints, timePlayer);
 
 		}
 
@@ -154,4 +157,57 @@ public class PointsManager : MonoBehaviour {
 		return bonus;
 	}
 
+	public void saveTimeAndPoints(int totalPoints, string timePlayer)
+	{
+		if (NomeDaFase == "Level 1 Farmacia") 
+		{
+			if(!PlayerPrefs.HasKey("TimeLevel1") && !PlayerPrefs.HasKey("PointsLevel1"))
+			{
+				PlayerPrefs.SetString ("TimeLevel1", timePlayer);
+				PlayerPrefs.SetInt ("PointsLevel1", totalPoints);
+
+			}else 
+			{
+				if (PlayerPrefs.GetInt ("PointsLevel1") < totalPoints) 
+				{
+					PlayerPrefs.SetString ("TimeLevel1", timePlayer);
+					PlayerPrefs.SetInt ("PointsLevel1", totalPoints);
+				}
+			}
+		}
+
+		if (NomeDaFase == "Level 2 Supermercado") 
+		{
+			if(!PlayerPrefs.HasKey("TimeLevel2") && !PlayerPrefs.HasKey("PointsLevel2"))
+			{
+				PlayerPrefs.SetString ("TimeLevel2", timePlayer);
+				PlayerPrefs.SetInt ("PointsLevel2", totalPoints);
+
+			}else 
+			{
+				if (PlayerPrefs.GetInt ("PointsLevel2") < totalPoints) 
+				{
+					PlayerPrefs.SetString ("TimeLevel2", timePlayer);
+					PlayerPrefs.SetInt ("PointsLevel2", totalPoints);
+				}
+			}
+		}
+
+		if (NomeDaFase == "Level 3 Academia") 
+		{
+			if(!PlayerPrefs.HasKey("TimeLevel3") && !PlayerPrefs.HasKey("PointsLevel3"))
+			{
+				PlayerPrefs.SetString ("TimeLevel3", timePlayer);
+				PlayerPrefs.SetInt ("PointsLevel3", totalPoints);
+
+			}else 
+			{
+				if (PlayerPrefs.GetInt ("PointsLevel3") < totalPoints) 
+				{
+					PlayerPrefs.SetString ("TimeLevel3", timePlayer);
+					PlayerPrefs.SetInt ("PointsLevel3", totalPoints);
+				}
+			}
+		}
+	}
 }
