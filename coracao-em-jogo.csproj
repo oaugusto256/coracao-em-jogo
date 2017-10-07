@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\ControllBadSpawner.cs" />
     <Compile Include="Assets\Scripts\DeactivateByCollision.cs" />
     <Compile Include="Assets\Scripts\DeactivateByDistance.cs" />
     <Compile Include="Assets\Scripts\DeactivateByTime.cs" />
