@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Selecao de Fases.unity
+- path: Assets/Menu.unity
   isLoaded: 1
   isActive: 1

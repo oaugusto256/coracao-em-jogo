@@ -26,7 +26,7 @@ public class TimerManager : MonoBehaviour {
 
 		timeString = string.Format ("{0:0}:{1:00}", minutes, seconds);
 
-		TimerUI.text = "Time: " + timeString; 
+		TimerUI.text = "Tempo: " + timeString; 
 
 		if (TimeValue == timeString) 
 		{

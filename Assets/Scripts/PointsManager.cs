@@ -33,7 +33,7 @@ public class PointsManager : MonoBehaviour {
 	void Start () 
 	{
        	curHealth = maxHealth;
-		textPoints.text = "POINTS: ";
+		textPoints.text = "Pontos: ";
 		points = 0;
 		NomeDaFase = SceneManager.GetActiveScene ().name;
 		countWaterbottle = 0;
@@ -42,7 +42,7 @@ public class PointsManager : MonoBehaviour {
 
 	void Update () 
 	{
-		textPoints.text = "POINTS: " + points;
+		textPoints.text = "Pontos: " + points;
 	}
 
 	void OnCollisionEnter(Collision collision)
@@ -67,16 +67,16 @@ public class PointsManager : MonoBehaviour {
 			LevelCompleteUI.gameObject.SetActive (true);
 
 			TimerManager timeManager = UIManager.GetComponent<TimerManager> ();
-			totalTimeUILComplete.text = "TEMPO: " + timeManager.timeString;
+			totalTimeUILComplete.text = "Tempo: " + timeManager.timeString;
 			string timePlayer = timeManager.timeString;
 
-			pointsUILComplete.text = "PONTOS: " + points;
+			pointsUILComplete.text = "Pontos: " + points;
 
 			int bonus = calculateBonusTime ();
-			bonusTimeUILComplete.text = "BÔNUS POR TEMPO: x" + bonus;
+			bonusTimeUILComplete.text = "Bônus por tempo: x" + bonus;
 
 			int totalPoints = points * bonus;
-			totalPointsUILComplete.text = "TOTAL: " + totalPoints;
+			totalPointsUILComplete.text = "Total: " + totalPoints;
 
 			saveTimeAndPoints (totalPoints, timePlayer);
 
@@ -97,9 +97,9 @@ public class PointsManager : MonoBehaviour {
 				timeUI.gameObject.SetActive (false);
                 textPoints.gameObject.SetActive(false);
                 GameOverUI.gameObject.SetActive(true);
-                totalPointsUIGOver.text = "PONTOS: " + points;
+                totalPointsUIGOver.text = "Pontos: " + points;
 				TimerManager timeManager = UIManager.GetComponent<TimerManager> ();
-				totalTimeUIGOver.text = "TEMPO: " + timeManager.timeString;
+				totalTimeUIGOver.text = "Tempo: " + timeManager.timeString;
             }
         }        
      }
