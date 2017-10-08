@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	public GameObject InstructionsUI;
+	public GameObject AboutUI;
+
+	public void openInstructions() {
+		InstructionsUI.SetActive (true);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void closeInstructions() {
+		InstructionsUI.SetActive (false);
+	}
+
+	public void openAbout() {
+		AboutUI.SetActive (true);
+	}
+
+	public void closeAbout() {
+		AboutUI.SetActive (false);
 	}
 }
