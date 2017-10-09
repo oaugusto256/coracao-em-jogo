@@ -20,8 +20,10 @@ public class PointsManager : MonoBehaviour {
 	public GameObject UIManager;
     public Canvas GameOverUI;
 	public Canvas LevelCompleteUI;
-    public AudioSource hitSphere;
-    public AudioSource hitCube;
+	public AudioSource run;
+    public AudioSource hitGoodThing;
+    public AudioSource hitBadThing;
+	public AudioSource gameOver;
 	public float curHealth = 0f;
 	public int maxHealth = 100;
 	public int qntWaterbottle; 
@@ -32,7 +34,7 @@ public class PointsManager : MonoBehaviour {
 
 	void Start () 
 	{
-       	curHealth = maxHealth;
+		curHealth = maxHealth;
 		textPoints.text = "Pontos: ";
 		points = 0;
 		NomeDaFase = SceneManager.GetActiveScene ().name;
@@ -42,6 +44,7 @@ public class PointsManager : MonoBehaviour {
 
 	void Update () 
 	{
+		
 		textPoints.text = "Pontos: " + points;
 	}
 
@@ -49,13 +52,15 @@ public class PointsManager : MonoBehaviour {
 	{
 		if (collision.gameObject.name == "Water(Clone)")
 		{
-            points += 10;
+			hitGoodThing.Play ();
+			points += 10;
 			countWaterbottle += 1;
 			controlHeartBeat (countWaterbottle);
-	    }
+		}
 
 		if ( qntWaterbottle == countWaterbottle ) 
 		{
+			run.Stop ();
 			Time.timeScale = 0;
 			PlayerPrefs.SetInt(""+NomeDaFase, 1  );
 			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
@@ -84,14 +89,16 @@ public class PointsManager : MonoBehaviour {
 
 		if (collision.gameObject.name == "Testosterone(Clone)") 
 		{
-            curHealth -= 20;
-            // hitCube.Play();
+			hitBadThing.Play ();
+			curHealth -= 20;
             float calcHealth = curHealth / maxHealth;
             setHealthBar(calcHealth);
 
             if (calcHealth == 0)
             {
-                Time.timeScale = 0;
+				run.Stop ();
+				gameOver.Play ();
+				Time.timeScale = 0;
 				HeartControl heartControl = Heart.GetComponent<HeartControl> ();
 				heartControl.velocityBeat = 0;
 				timeUI.gameObject.SetActive (false);

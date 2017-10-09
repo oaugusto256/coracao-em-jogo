@@ -12,6 +12,7 @@ public class TimerManager : MonoBehaviour {
 	public Text TimeUI;
 	public Text ExceedTimeUI;
 	public Canvas GameOverUI;
+	public AudioSource gameOver;
 	float timer = 0f;
 	public string TimeValue;
 	public string timeString;
@@ -30,6 +31,7 @@ public class TimerManager : MonoBehaviour {
 
 		if (TimeValue == timeString) 
 		{
+			gameOver.Play ();
 			Time.timeScale = 0;
 			TotalPoints.gameObject.SetActive (false);
 			TotalTime.gameObject.SetActive (false);

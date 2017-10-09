@@ -4,29 +4,40 @@ using UnityEngine;
 
 public class SoundsBtns : MonoBehaviour {
 
-	public AudioSource soundsButtom;
-	public AudioClip buttonGreen;
-	public AudioClip buttonRed;
+	public AudioSource buttonGreen;
+	public AudioSource buttonRed;
+	//public AudioSource runSound;
+	//public AudioSource hitGoodThingSnd;
+	//public AudioSource hitBadThingSnd;
+	//public AudioSource gameOverSound;
 
 	public void clickButtonGreen()
 	{
-		StartCoroutine (SoundButtonGreen ());		
-	}
-
-	IEnumerator SoundButtonGreen ()
-	{
-		yield return new WaitForSeconds(0.01f);
-		soundsButtom.PlayOneShot(buttonGreen);
+		buttonGreen.Play ();
 	}
 
 	public void clickButtonRed()
 	{
-		StartCoroutine (SoundButtonRed());
+		buttonRed.Play ();
 	}
 
-	IEnumerator SoundButtonRed()
+	/*public void run()
 	{
-		yield return new WaitForSeconds(0.01f);
-		soundsButtom.PlayOneShot(buttonRed);
+		runSound.Play ();
 	}
+
+	public void hitGoodThing()
+	{
+		hitGoodThingSnd.Play ();
+	}
+
+	public void hitBadThing()
+	{
+		hitBadThingSnd.Play ();
+	}
+
+	public void gameOver()
+	{
+		gameOverSound.Play ();
+	}*/
 }
