@@ -55,7 +55,6 @@
      <Compile Include="Assets\Scripts\ControllBadSpawner.cs" />
      <Compile Include="Assets\Scripts\DeactivateByCollision.cs" />
      <Compile Include="Assets\Scripts\DeactivateByDistance.cs" />
-     <Compile Include="Assets\Scripts\DeactivateByTime.cs" />
      <Compile Include="Assets\Scripts\FPSStatis.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GeneralSpawner.cs" />
