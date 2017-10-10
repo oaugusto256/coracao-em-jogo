@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 39cc7fba55a8493469e4223b625b3732
+timeCreated: 1507585864
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Bal_01
+    100002: Boneco_008
+    100004: Boneco_009
+    100006: Boneco_01
+    100008: Boneco_010
+    100010: Boneco_02
+    100012: Boneco_03
+    100014: Boneco_04
+    100016: Boneco_05
+    100018: Boneco_06
+    100020: Boneco_07
+    100022: Cad_01
+    100024: Computador
+    100026: Computador001
+    100028: Computador002
+    100030: Est_01
+    100032: Est_02
+    100034: Est_03
+    100036: //RootNode
+    100038: Parede
+    100040: Piso
+    100042: Pla_01
+    100044: Porta
+    100046: Pra_01
+    100048: Pra_02
+    100050: Pra_03
+    100052: Pra_04
+    100054: Pra_05
+    100056: Ref_002
+    100058: Ref_01
+    100060: Ref_02
+    100062: Ref_03
+    100064: Ref_04
+    400000: Bal_01
+    400002: Boneco_008
+    400004: Boneco_009
+    400006: Boneco_01
+    400008: Boneco_010
+    400010: Boneco_02
+    400012: Boneco_03
+    400014: Boneco_04
+    400016: Boneco_05
+    400018: Boneco_06
+    400020: Boneco_07
+    400022: Cad_01
+    400024: Computador
+    400026: Computador001
+    400028: Computador002
+    400030: Est_01
+    400032: Est_02
+    400034: Est_03
+    400036: //RootNode
+    400038: Parede
+    400040: Piso
+    400042: Pla_01
+    400044: Porta
+    400046: Pra_01
+    400048: Pra_02
+    400050: Pra_03
+    400052: Pra_04
+    400054: Pra_05
+    400056: Ref_002
+    400058: Ref_01
+    400060: Ref_02
+    400062: Ref_03
+    400064: Ref_04
+    2300000: Bal_01
+    2300002: Boneco_008
+    2300004: Boneco_009
+    2300006: Boneco_01
+    2300008: Boneco_010
+    2300010: Boneco_02
+    2300012: Boneco_03
+    2300014: Boneco_04
+    2300016: Boneco_05
+    2300018: Boneco_06
+    2300020: Boneco_07
+    2300022: Cad_01
+    2300024: Computador
+    2300026: Computador001
+    2300028: Computador002
+    2300030: Est_01
+    2300032: Est_02
+    2300034: Est_03
+    2300036: Parede
+    2300038: Piso
+    2300040: Pla_01
+    2300042: Porta
+    2300044: Pra_01
+    2300046: Pra_02
+    2300048: Pra_03
+    2300050: Pra_04
+    2300052: Pra_05
+    2300054: Ref_01
+    2300056: Ref_02
+    2300058: Ref_03
+    2300060: Ref_04
+    3300000: Bal_01
+    3300002: Boneco_008
+    3300004: Boneco_009
+    3300006: Boneco_01
+    3300008: Boneco_010
+    3300010: Boneco_02
+    3300012: Boneco_03
+    3300014: Boneco_04
+    3300016: Boneco_05
+    3300018: Boneco_06
+    3300020: Boneco_07
+    3300022: Cad_01
+    3300024: Computador
+    3300026: Computador001
+    3300028: Computador002
+    3300030: Est_01
+    3300032: Est_02
+    3300034: Est_03
+    3300036: Parede
+    3300038: Piso
+    3300040: Pla_01
+    3300042: Porta
+    3300044: Pra_01
+    3300046: Pra_02
+    3300048: Pra_03
+    3300050: Pra_04
+    3300052: Pra_05
+    3300054: Ref_01
+    3300056: Ref_02
+    3300058: Ref_03
+    3300060: Ref_04
+    4300000: Est_01
+    4300002: Est_02
+    4300004: Parede
+    4300006: Pra_01
+    4300008: Cad_01
+    4300010: Ref_01
+    4300012: Porta
+    4300014: Bal_01
+    4300016: Pla_01
+    4300018: Est_03
+    4300020: Piso
+    4300022: Ref_02
+    4300024: Ref_03
+    4300026: Computador
+    4300028: Computador001
+    4300030: Computador002
+    4300032: Boneco_01
+    4300034: Boneco_02
+    4300036: Boneco_03
+    4300038: Boneco_04
+    4300040: Boneco_05
+    4300042: Boneco_06
+    4300044: Boneco_07
+    4300046: Pra_02
+    4300048: Pra_03
+    4300050: Pra_04
+    4300052: Pra_05
+    4300054: Ref_04
+    4300056: Boneco_008
+    4300058: Boneco_009
+    4300060: Boneco_010
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
