@@ -86,9 +86,7 @@
     <Compile Include="Assets\Scripts\DeactivateByCollision.cs" />
     <Compile Include="Assets\Scripts\DeactivateByDistance.cs" />
     <Compile Include="Assets\Scripts\FPSStatis.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GeneralSpawner.cs" />
-    <Compile Include="Assets\Scripts\GeneralSpeed.cs" />
     <Compile Include="Assets\Scripts\HeartControl.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\LoadSave.cs" />
@@ -99,6 +97,7 @@
     <Compile Include="Assets\Scripts\PointsManager.cs" />
     <Compile Include="Assets\Scripts\SoundsBtns.cs" />
     <Compile Include="Assets\Scripts\TimerManager.cs" />
+    <Compile Include="Assets\Scripts\UILevelsManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
