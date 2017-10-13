@@ -18,9 +18,7 @@ public class PointsManager : MonoBehaviour {
     public GameObject HealthBar;
 	public GameObject Heart;
 	public GameObject UIManager;
-    public Canvas GameOverUI;
-	public Canvas LevelCompleteUI;
-	public AudioSource run;
+ 	public AudioSource run;
     public AudioSource hitGoodThing;
     public AudioSource hitBadThing;
 	public AudioSource gameOver;
@@ -69,7 +67,8 @@ public class PointsManager : MonoBehaviour {
 			timeUI.gameObject.SetActive (false);
 			textPoints.gameObject.SetActive(false);
 
-			LevelCompleteUI.gameObject.SetActive (true);
+			UILevelsManager uiManager = UIManager.GetComponent<UILevelsManager> ();
+			uiManager.OpenLevelCompleteUI ();
 
 			TimerManager timeManager = UIManager.GetComponent<TimerManager> ();
 			totalTimeUILComplete.text = "Tempo: " + timeManager.timeString;
@@ -103,7 +102,8 @@ public class PointsManager : MonoBehaviour {
 				heartControl.velocityBeat = 0;
 				timeUI.gameObject.SetActive (false);
                 textPoints.gameObject.SetActive(false);
-                GameOverUI.gameObject.SetActive(true);
+				UILevelsManager uiManager = UIManager.GetComponent<UILevelsManager> ();
+				uiManager.OpenGameOverUI ();
                 totalPointsUIGOver.text = "Pontos: " + points;
 				TimerManager timeManager = UIManager.GetComponent<TimerManager> ();
 				totalTimeUIGOver.text = "Tempo: " + timeManager.timeString;

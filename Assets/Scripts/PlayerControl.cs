@@ -18,6 +18,8 @@ public class PlayerControl : MonoBehaviour {
 
 	void Update () {
 
+		transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
+		transform.localRotation = Quaternion.Euler(0.0f, -180.0f, 0.0f);
 		transform.position = new Vector3(-12.17f, -3.4f, transform.position.z);
 
 		if(Input.GetKeyDown(KeyCode.RightArrow)) {
