@@ -4,22 +4,37 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
-	public GameObject InstructionsUI;
-	public GameObject AboutUI;
+	public Canvas InstructionsUI;
+	public Canvas AboutUI;
+	public Canvas Config;
 
-	public void openInstructions() {
-		InstructionsUI.SetActive (true);
+	public void openInstructions() 
+	{
+		InstructionsUI.gameObject.SetActive (true);
 	}
 
-	public void closeInstructions() {
-		InstructionsUI.SetActive (false);
+	public void closeInstructions() 
+	{
+		InstructionsUI.gameObject.SetActive(false);
 	}
 
-	public void openAbout() {
-		AboutUI.SetActive (true);
+	public void openAbout() 
+	{
+		AboutUI.gameObject.SetActive (true);
 	}
 
-	public void closeAbout() {
-		AboutUI.SetActive (false);
+	public void closeAbout() 
+	{
+		AboutUI.gameObject.SetActive (false);
+	}
+
+	public void openConfig()
+	{
+		Config.gameObject.SetActive (true);
+	}
+
+	public void closeConfig()
+	{
+		Config.gameObject.SetActive (false);
 	}
 }
