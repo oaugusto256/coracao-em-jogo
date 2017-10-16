@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class TimerManager : MonoBehaviour {
 
-	public Text TimerUI;
+	public AudioSource run;
 	public Text TotalPoints;
 	public Text TotalTime;
 	public Text PointsUI;
 	public Text TimeUI;
 	public Text ExceedTimeUI;
 	public Canvas GameOverUI;
-	public AudioSource gameOver;
 	float timer = 0f;
 	public string TimeValue;
 	public string timeString;
@@ -27,11 +26,11 @@ public class TimerManager : MonoBehaviour {
 
 		timeString = string.Format ("{0:0}:{1:00}", minutes, seconds);
 
-		TimerUI.text = "Tempo: " + timeString; 
+		TimeUI.text = "Tempo: " + timeString; 
 
 		if (TimeValue == timeString) 
 		{
-			gameOver.Play ();
+			run.Stop ();
 			Time.timeScale = 0;
 			TotalPoints.gameObject.SetActive (false);
 			TotalTime.gameObject.SetActive (false);

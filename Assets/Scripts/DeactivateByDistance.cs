@@ -9,7 +9,7 @@ public class DeactivateByDistance : MonoBehaviour
 	void Update () 
 	{
 		distance = Vector3.Distance(transform.parent.position, transform.position);
-		if (distance > 95) 
+		if (distance > 120) 
 		{
 			gameObject.SetActive (false);
 			transform.position = transform.parent.position;

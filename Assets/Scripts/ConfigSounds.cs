@@ -63,7 +63,10 @@ public class ConfigSounds : MonoBehaviour {
 		if( antMscSnds != atualMscSnds )
 		{
 			saveNewMscValue ( atualMscSnds );
-			music.volume = atualMscSnds;
+			if(music != null)
+			{
+				music.volume = atualMscSnds;
+			}
 			antMscSnds = atualMscSnds;
 		}
 

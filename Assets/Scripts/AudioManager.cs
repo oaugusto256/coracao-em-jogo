@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour {
 			AudioBegin = false;
 			Destroy (this.gameObject);
 		}
-		else if (Application.loadedLevelName == "Level 3 Academia ")
+		else if (Application.loadedLevelName == "Level 3 Academia")
 		{
 			AudioBegin = false;
 			Destroy (this.gameObject);

@@ -20,7 +20,7 @@ public class PlayerControl : MonoBehaviour {
 
 		transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
 		transform.localRotation = Quaternion.Euler(0.0f, -180.0f, 0.0f);
-		transform.position = new Vector3(-12.17f, -3.4f, transform.position.z);
+		transform.localPosition = new Vector3(-12.17f, -3.4f, transform.localPosition.z);
 
 		if (Time.timeScale != 0) 
 		{
@@ -54,19 +54,19 @@ public class PlayerControl : MonoBehaviour {
 	public void moveRight (float step)
 	{
 		lastLeft = false;
-		transform.position = Vector3.MoveTowards(transform.position, transform.position - Vector3.forward * lineWidth, step);
+		transform.localPosition = Vector3.MoveTowards(transform.localPosition, transform.localPosition - Vector3.forward * lineWidth, step);
 
 	}
 
 	public void moveLeft (float step)
 	{
 		lastRight = false;
-		transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.forward * lineWidth, step);
+		transform.localPosition = Vector3.MoveTowards(transform.localPosition, transform.localPosition + Vector3.forward * lineWidth, step);
 	}
 		
 	void OnCollisionEnter(Collision collision)
 	{
-		transform.position = new Vector3(-12.17f, -3.4f, transform.position.z);
+		transform.position = new Vector3(-12.17f, -3.4f, transform.localPosition.z);
 		if (collision.gameObject.name == "Road1") 
 		{
 			lastLeft = true;

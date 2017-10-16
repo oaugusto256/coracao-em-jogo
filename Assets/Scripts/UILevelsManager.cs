@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class UILevelsManager : MonoBehaviour {
 
-	public bool gameIsPaused = false;
+	bool gameIsPaused = false;
+	bool gameIsOver = false;	
 	public Canvas InstructionsUI;
 	public Canvas PauseUI;
+	public Canvas ConfigUI;
 	public Canvas GameOverUI;
 	public Canvas LevelCompletUI;
 
@@ -23,20 +25,39 @@ public class UILevelsManager : MonoBehaviour {
 
 	public void OpenPauseUI()
 	{
-		gameIsPaused = true;
-		Time.timeScale = 0;
-		PauseUI.gameObject.SetActive (true);
+		if(gameIsOver == false)
+		{
+			Time.timeScale = 0;
+			gameIsPaused = true;
+			PauseUI.gameObject.SetActive (true);
+		}
 	}
 
 	public void ClosePauseUI()
 	{
-		gameIsPaused = false;
 		Time.timeScale = 1;
+		gameIsPaused = false;
 		PauseUI.gameObject.SetActive (false);
+	}
+
+	public void OpenConfigUI()
+	{
+		if (gameIsPaused == false && gameIsOver == false) 
+		{
+			Time.timeScale = 0;
+			ConfigUI.gameObject.SetActive (true);
+		}
+	}
+
+	public void CloseConfigUI()
+	{
+		Time.timeScale = 1;
+		ConfigUI.gameObject.SetActive (false);
 	}
 
 	public void OpenGameOverUI()
 	{
+		gameIsOver = true;
 		Time.timeScale = 0;
 		GameOverUI.gameObject.SetActive (true);
 	}

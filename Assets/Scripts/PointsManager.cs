@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PointsManager : MonoBehaviour {
 
-    bool gameIsPaused = false;
     public Text textPoints;
 	public Text timeUI;
     public Text totalPointsUIGOver;
@@ -18,17 +17,38 @@ public class PointsManager : MonoBehaviour {
     public GameObject HealthBar;
 	public GameObject Heart;
 	public GameObject UIManager;
- 	public AudioSource run;
+ 	 public AudioSource run;
     public AudioSource hitGoodThing;
     public AudioSource hitBadThing;
-	public AudioSource gameOver;
 	public float curHealth = 0f;
 	public int maxHealth = 100;
-	public int qntWaterbottle; 
-	int countWaterbottle;
 	int points;
 	int controlFunction;
 	string NomeDaFase;
+
+	public int qntSpawner;
+	public int countSpawner;
+
+	public int qntMedicalEvaluation;
+	int countMedicalEvaluation;
+
+	public int qntWater; 
+	int countWater;
+
+	public int qntVitaminC;
+	int countVitaminC;
+
+	public int qntStrawberry;
+	int countStrawberry;
+
+	public int qntDumbell;
+	int countDumbell;
+
+	bool medical = false;
+	bool agua = false;
+	bool vitamina = false;
+	bool fruta = false;
+	bool peso = false;
 
 	void Start () 
 	{
@@ -36,8 +56,17 @@ public class PointsManager : MonoBehaviour {
 		textPoints.text = "Pontos: ";
 		points = 0;
 		NomeDaFase = SceneManager.GetActiveScene ().name;
-		countWaterbottle = 0;
+		
+		countSpawner = 0;
+
+		countMedicalEvaluation = 1;
+		countWater = 1;
+		countVitaminC = 1;
+		countStrawberry = 1;
+		countDumbell = 1;
+
 		controlFunction = 1;
+		
 	}
 
 	void Update () 
@@ -48,24 +77,226 @@ public class PointsManager : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.name == "Water(Clone)")
-		{
-			hitGoodThing.Play ();
-			points += 10;
-			countWaterbottle += 1;
-			controlHeartBeat (countWaterbottle);
-		}
+		
+			if (collision.gameObject.name == "Avaliação Medica(Clone)") 
+			{
+				if( countMedicalEvaluation < qntMedicalEvaluation)
+				{
+					hitGoodThing.Play ();
+					points += 15;
+					countMedicalEvaluation += 1;
+				} 
+				else if(countMedicalEvaluation == qntMedicalEvaluation)
+				{ 
+					if(medical == false)
+					{ 
+						hitGoodThing.Play ();
+						points += 15;
+						medical = true;
+						countSpawner += 1;
+						verificaVitoria(countSpawner);
+					}
+					
+				}
+				
+			}
+			
+			if (collision.gameObject.name == "Garrafa água(Clone)") 
+			{
+				if(countWater < qntWater)
+				{
+					hitGoodThing.Play ();
+					points += 10;
+					countWater += 1;
+					controlHeartBeat (countWater);
+				}
+				else if( countWater == qntWater )
+				{
+					if(agua == false)
+					{
+						hitGoodThing.Play ();
+						points += 10;
+						controlHeartBeat (countWater);
+						agua = true;
+						countSpawner += 1;
+						verificaVitoria(countSpawner);
+					}
+				}
+			}
 
-		if ( qntWaterbottle == countWaterbottle ) 
+			
+			if (collision.gameObject.name == "VitaminaC(Clone)") 
+			{
+				if(countVitaminC < qntVitaminC)
+				{
+					hitGoodThing.Play ();
+					points += 5;
+					countVitaminC += 1;
+				} 
+				else if( countVitaminC == qntVitaminC )
+				{
+					if(vitamina == false)
+					{
+						hitGoodThing.Play ();
+						points += 5;
+						vitamina = true;
+						countSpawner += 1;
+						verificaVitoria(countSpawner);
+					}
+				}
+			}
+
+			if (collision.gameObject.name == "Fruta(Clone)") 
+			{
+				if(countStrawberry < qntStrawberry)
+				{
+					hitGoodThing.Play ();
+					points += 15;
+					countStrawberry += 1;
+				}
+				else if(countStrawberry == qntStrawberry)
+				{
+					if(fruta == false)
+					{
+						hitGoodThing.Play ();
+						points += 15;
+						fruta = true;
+						countSpawner += 1;
+						verificaVitoria(countSpawner);
+					}
+				}
+			}
+
+			if (collision.gameObject.name == "Peso(Clone)") 
+			{
+				if(countDumbell < qntDumbell)
+				{
+					hitGoodThing.Play ();
+					points += 25;
+					countDumbell += 1;
+				}
+				else if(countDumbell == qntDumbell)
+				{ 
+					if(peso == false)
+					{
+						hitGoodThing.Play ();
+						points += 25;
+						peso = true;
+						countSpawner += 1;
+						verificaVitoria(countSpawner);
+					}
+				}
+			}
+
+			if ( collision.gameObject.name == "Termogenico(Clone)") 
+			{
+				hitBadThing.Play ();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar (calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+
+			
+			if (collision.gameObject.name == "Testosterona(Clone)") 
+			{
+				hitBadThing.Play ();
+				curHealth -= 20;
+			    float calcHealth = curHealth / maxHealth;
+				setHealthBar (calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+
+			if (collision.gameObject.name == "Refri(Clone)") 
+			{
+				hitBadThing.Play ();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar (calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+			
+			if (collision.gameObject.name == "Cigarro(Clone)") 
+			{
+				hitBadThing.Play ();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar (calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+
+			if (collision.gameObject.name == "Suplemento(Clone)") 
+			{
+				hitBadThing.Play ();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar (calcHealth);
+
+				verificaHealth(calcHealth);
+				
+			}
+
+			if (collision.gameObject.name == "Energetico(Clone)") 
+			{
+				hitBadThing.Play ();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar (calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+
+			if ( collision.gameObject.name == "Anabolizante(Clone)") 
+			{
+				hitBadThing.Play ();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar (calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+				
+	}
+
+    public void setHealthBar(float myHealth)
+    {
+        HealthBar.transform.localScale = new Vector3(myHealth, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
+    }
+
+	public void verificaHealth(float calcHealth)
+	{
+		if (calcHealth == 0) 
+		{ 
+			run.Stop ();
+			Time.timeScale = 0;
+			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
+			heartControl.velocityBeat = 0;
+			timeUI.gameObject.SetActive (false);
+			textPoints.gameObject.SetActive (false);
+			UILevelsManager uiManager = UIManager.GetComponent<UILevelsManager> ();
+			uiManager.OpenGameOverUI ();
+			totalPointsUIGOver.text = "Pontos: " + points;
+			TimerManager timeManager = UIManager.GetComponent<TimerManager> ();
+			totalTimeUIGOver.text = "Tempo: " + timeManager.timeString;
+		}	
+	}
+
+	public void verificaVitoria(int countSpawner)
+	{
+		if(countSpawner == qntSpawner)
 		{
 			run.Stop ();
 			Time.timeScale = 0;
-			PlayerPrefs.SetInt(""+NomeDaFase, 1  );
+			PlayerPrefs.SetInt ("" + NomeDaFase, 1);
 			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
 			heartControl.velocityBeat = 0;
 
 			timeUI.gameObject.SetActive (false);
-			textPoints.gameObject.SetActive(false);
+			textPoints.gameObject.SetActive (false);
 
 			UILevelsManager uiManager = UIManager.GetComponent<UILevelsManager> ();
 			uiManager.OpenLevelCompleteUI ();
@@ -85,41 +316,11 @@ public class PointsManager : MonoBehaviour {
 			saveTimeAndPoints (totalPoints, timePlayer);
 
 		}
-
-		if (collision.gameObject.name == "Testosterone(Clone)") 
-		{
-			hitBadThing.Play ();
-			curHealth -= 20;
-            float calcHealth = curHealth / maxHealth;
-            setHealthBar(calcHealth);
-
-            if (calcHealth == 0)
-            {
-				run.Stop ();
-				gameOver.Play ();
-				Time.timeScale = 0;
-				HeartControl heartControl = Heart.GetComponent<HeartControl> ();
-				heartControl.velocityBeat = 0;
-				timeUI.gameObject.SetActive (false);
-                textPoints.gameObject.SetActive(false);
-				UILevelsManager uiManager = UIManager.GetComponent<UILevelsManager> ();
-				uiManager.OpenGameOverUI ();
-                totalPointsUIGOver.text = "Pontos: " + points;
-				TimerManager timeManager = UIManager.GetComponent<TimerManager> ();
-				totalTimeUIGOver.text = "Tempo: " + timeManager.timeString;
-            }
-        }        
-     }
-
-    public void setHealthBar(float myHealth)
-    {
-        HealthBar.transform.localScale = new Vector3(myHealth, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
-    }
-
+	}
 	public void controlHeartBeat(int countWaterbottle)
 	{
 		
-		float percentWaterBottle = (countWaterbottle * 100) / qntWaterbottle; 
+		float percentWaterBottle = (countWaterbottle * 100) / countWater; 
 	
 		if ((percentWaterBottle >= 0 && percentWaterBottle <= 25) && controlFunction == 1) {
 			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
