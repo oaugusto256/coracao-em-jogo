@@ -324,19 +324,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: P:\Desenvolvimento\coracao-em-jogo
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 111}
-    m_SelectedIDs: 28250000
-    m_LastClickedID: 9512
-    m_ExpandedIDs: 0000000028250000e6250000ce2600007c290000ea290000182a000022300000243000002630000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 240}
+    m_SelectedIDs: ca250000
+    m_LastClickedID: 9674
+    m_ExpandedIDs: 0000000028250000e6250000d426000088290000f8290000282a00008c3100008e3100009031000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000028250000e62500007a260000ce260000d82700007c290000ea290000182a0000223000002430000026300000
+    m_ExpandedIDs: 0000000028250000e6250000d426000088290000f8290000282a00008c3100008e31000090310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,9 +480,9 @@ MonoBehaviour:
     height: 552
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 3658b1ff2aaeb1ff58f4b1ff9a38b2ffaac4b3ff1a15b5ff7e4cb9ff242ec4ff4087c5ff2815c6ff9e37c6ff0074c6ff8e9ec6ff94a1c6ffcc7ac7ff3802c8ffa499c8ff241bc9ff0c22cbff2cfccbff9297ccff8aa0ccff58efccff66edceff6001cfff4c23cfff4271d0ff9ae2d0ff285dd4ff5e6ed4ffae93d4ff4eaad4ffacbbd4ffd0cad4ff2eebd4ff325bdcffda93dcfffc9edcffecb7dcff5ebedcff32c7dcffac9dddffe69dddffe8a5ddff70afddff04e9ddff08f4ddffda05deff206cdeff2077deff1228dfff1e28dfff0430dfff4a39dfffa0b9dfff04ccdfff04d2dfff7808e0ffde10e0ffe853e0ffe873e0fff4f5e0fff6fce0ff3a6be1ff166ce1ffd07ae1ff8083e1ffcee5e2ff5af6e2ffbe06e3ff7e2de3ffca37e3ff345ae3ffb263e3ffce55e4ffbcc5e4ffb6c0e5ffa401e6ff820ae6ff12afe6ff64c5e6ffc00ee7ff1c45e7ffc046e9ff8652e9ff865be9ff5081e9ff6e89e9ffb21debff2e38ebffc00beeff1014eeffa61feeff4c0df9ffcea6feffdefbffff00000000882d00009c8201001a840100d8e5020004df030078df03002ee0030066e00300220f0400ac0f0400d80f04000c100400101004006c10040046380400c4380400523a04007a3c04007e3c0400123d04006e52040042560400a2560400a65604003a570400aa6d0400ca6e040048750400b8750400c4750400baa20400b2a604009eea040032eb0400e8ed04000eef0400c0f00400d00f050056100500101c0500661c05006a1c05009c2905007e2a0500788305007c830500d2830500e8850500228d0500fc910500489e0500ba9e0500b89f050002a0050024a0050090a10500d0a1050070a4060050ae0600ccae06005ab00600d8b20600e4b2060048b3060048bc060086be0600dcc00600cec106007ec206008cca06004acc06006acd060078cd0600b8ce0600ced006001ed1060022d10600827a0700eaec070084fc0700f4fc070012000800060108005c0108006801080074010800a6030800ba030800be870800028a08009a8a0800f2a208004ca4080090a6080010d20800cafd0800d2fd080062fe080092fe0800c6fe080034ff080014900900c4400a00cc400a00ea400a0094410a002a420a0036420a0098430a0070740d00f2740d00dc750d00d6760d0072780d00aed00d00d2d00d0008d10d0008d20d0042d20d00d23a0e00023c0e00d04d0e00ae500e0094660e0046670e00f6680e00f4820e0058840e00
+    m_SelectedIDs: 2a460000
+    m_LastClickedID: 17962
+    m_ExpandedIDs: 88deffff8ce7ffff28f3ffffdefbffff00000000cc4400007a460000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,7 +501,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - Level 3 Academia
+  - Level 2 Supermercado
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     speed: 2
-    m_Value: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+    m_Value: {x: -0.70710677, y: 0, z: -0, w: -0.70710677}
   m_Size:
     m_Target: 20.59434
     speed: 2
