@@ -32,23 +32,33 @@ public class PointsManager : MonoBehaviour {
 	public int qntMedicalEvaluation;
 	int countMedicalEvaluation;
 
-	public int qntWater; 
-	int countWater;
+	public int qntCafeina;
+	int countCafeina;
 
 	public int qntVitaminC;
 	int countVitaminC;
+
+	public int qntWater;
+	int countWater;
+
+	public int qntAntedrepessant;
+	int countAntidepressant;
 
 	public int qntStrawberry;
 	int countStrawberry;
 
 	public int qntDumbell;
 	int countDumbell;
-
+	public int qntDCO;
+	int countDCO;
 	bool medical = false;
+	bool cafeina;
 	bool agua = false;
 	bool vitamina = false;
+	bool antidepressant = false;
 	bool fruta = false;
 	bool peso = false;
+	bool dco = false;
 
 	void Start () 
 	{
@@ -61,9 +71,12 @@ public class PointsManager : MonoBehaviour {
 
 		countMedicalEvaluation = 1;
 		countWater = 1;
+		countCafeina = 1;
 		countVitaminC = 1;
+		countAntidepressant = 1;
 		countStrawberry = 1;
 		countDumbell = 1;
+		countDCO = 1;
 
 		controlFunction = 1;
 		
@@ -78,6 +91,68 @@ public class PointsManager : MonoBehaviour {
 	void OnCollisionEnter(Collision collision)
 	{
 		
+			if(collision.gameObject.name == "Cafeina(Clone)")
+			{
+				if(countCafeina < qntCafeina)
+				{
+					hitGoodThing.Play();
+					points += 1;
+					countCafeina +=1;
+				}
+				else if(countCafeina == qntCafeina)
+				{
+					if(cafeina == false)
+					{
+						hitGoodThing.Play();
+						points += 1;
+						cafeina = true;
+						countSpawner += 1;
+						verificaVitoria(countSpawner);
+					}
+				}
+			}
+
+			if (collision.gameObject.name == "Garrafa água(Clone)") 
+			{
+				if(countWater < qntWater)
+				{
+					hitGoodThing.Play ();
+					points += 10;
+					countWater += 1;
+				}
+				else if( countWater == qntWater )
+				{
+					if(agua == false)
+					{
+						hitGoodThing.Play ();
+						points += 10;
+						agua = true;
+						countSpawner += 1;
+						verificaVitoria(countSpawner);
+					}
+				}
+			}	
+			
+			if(collision.gameObject.name == "Antidepressivo(Clone)")
+			{
+				if(countAntidepressant < qntAntedrepessant)
+				{
+					hitGoodThing.Play();
+					points += 5;
+					countAntidepressant +=1;
+				}
+				else if(countAntidepressant == qntAntedrepessant)
+				{
+					if(antidepressant == false)
+					{
+						hitGoodThing.Play();
+						points += 5;
+						antidepressant = true;
+						countSpawner += 1;
+						verificaVitoria(countSpawner);
+					}
+				}
+			}
 			if (collision.gameObject.name == "Avaliação Medica(Clone)") 
 			{
 				if( countMedicalEvaluation < qntMedicalEvaluation)
@@ -101,44 +176,22 @@ public class PointsManager : MonoBehaviour {
 				
 			}
 			
-			if (collision.gameObject.name == "Garrafa água(Clone)") 
-			{
-				if(countWater < qntWater)
-				{
-					hitGoodThing.Play ();
-					points += 10;
-					countWater += 1;
-					controlHeartBeat (countWater);
-				}
-				else if( countWater == qntWater )
-				{
-					if(agua == false)
-					{
-						hitGoodThing.Play ();
-						points += 10;
-						controlHeartBeat (countWater);
-						agua = true;
-						countSpawner += 1;
-						verificaVitoria(countSpawner);
-					}
-				}
-			}
-
-			
 			if (collision.gameObject.name == "VitaminaC(Clone)") 
 			{
 				if(countVitaminC < qntVitaminC)
 				{
 					hitGoodThing.Play ();
-					points += 5;
+					points += 10;
 					countVitaminC += 1;
+					controlHeartBeat (countVitaminC);
 				} 
 				else if( countVitaminC == qntVitaminC )
 				{
 					if(vitamina == false)
 					{
 						hitGoodThing.Play ();
-						points += 5;
+						points += 10;
+						controlHeartBeat (countVitaminC);
 						vitamina = true;
 						countSpawner += 1;
 						verificaVitoria(countSpawner);
@@ -188,6 +241,27 @@ public class PointsManager : MonoBehaviour {
 				}
 			}
 
+			if (collision.gameObject.name == "DCO(Clone)") 
+			{
+				if(countDCO < qntDCO)
+				{
+					hitGoodThing.Play ();
+					points += 1;
+					countDCO += 1;
+				}
+				else if(countDCO == qntDCO)
+				{ 
+					if(dco == false)
+					{
+						hitGoodThing.Play ();
+						points += 5;
+						dco = true;
+						countSpawner += 1;
+						verificaVitoria(countSpawner);
+					}
+				}
+			}
+
 			if ( collision.gameObject.name == "Termogenico(Clone)") 
 			{
 				hitBadThing.Play ();
@@ -198,22 +272,61 @@ public class PointsManager : MonoBehaviour {
 				verificaHealth(calcHealth);
 			}
 
+			if(collision.gameObject.name == "Suplemento(Clone)")
+			{
+				hitBadThing.Play();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar(calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+
+			if(collision.gameObject.name == "EPO(Clone)")
+			{
+				hitBadThing.Play();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar(calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+
+			if(collision.gameObject.name == "GH(Clone)")
+			{
+				hitBadThing.Play();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar(calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+
+			if(collision.gameObject.name == "Efedrina(Clone)")
+			{
+				hitBadThing.Play();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar(calcHealth);
+
+				verificaHealth(calcHealth);
+			}
 			
+			if(collision.gameObject.name == "Diuretico(Clone)")
+			{
+				hitBadThing.Play();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar(calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+
 			if (collision.gameObject.name == "Testosterona(Clone)") 
 			{
 				hitBadThing.Play ();
 				curHealth -= 20;
 			    float calcHealth = curHealth / maxHealth;
-				setHealthBar (calcHealth);
-
-				verificaHealth(calcHealth);
-			}
-
-			if (collision.gameObject.name == "Refri(Clone)") 
-			{
-				hitBadThing.Play ();
-				curHealth -= 20;
-				float calcHealth = curHealth / maxHealth;
 				setHealthBar (calcHealth);
 
 				verificaHealth(calcHealth);
@@ -251,6 +364,16 @@ public class PointsManager : MonoBehaviour {
 			}
 
 			if ( collision.gameObject.name == "Anabolizante(Clone)") 
+			{
+				hitBadThing.Play ();
+				curHealth -= 20;
+				float calcHealth = curHealth / maxHealth;
+				setHealthBar (calcHealth);
+
+				verificaHealth(calcHealth);
+			}
+
+			if ( collision.gameObject.name == "Canabis(Clone)") 
 			{
 				hitBadThing.Play ();
 				curHealth -= 20;
@@ -317,26 +440,26 @@ public class PointsManager : MonoBehaviour {
 
 		}
 	}
-	public void controlHeartBeat(int countWaterbottle)
+	public void controlHeartBeat(int countVitaminC)
 	{
 		
-		float percentWaterBottle = (countWaterbottle * 100) / countWater; 
-	
-		if ((percentWaterBottle >= 0 && percentWaterBottle <= 25) && controlFunction == 1) {
+		float percentVitaminC = (countVitaminC * 100) / qntVitaminC; 
+		
+		if ((percentVitaminC >= 0 && percentVitaminC <= 25) && controlFunction == 1) {
 			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
 			heartControl.velocityBeat = 0.6f;
 			controlFunction += 1;
-		} else if (( percentWaterBottle >= 26 && percentWaterBottle <= 50) && controlFunction == 2) 
+		} else if (( percentVitaminC >= 26 && percentVitaminC <= 50) && controlFunction == 2) 
 		{
 			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
 			heartControl.velocityBeat = 0.9f;
 			controlFunction += 1;
-		}else if ((percentWaterBottle >= 51 && percentWaterBottle <= 75) && controlFunction == 3)
+		}else if ((percentVitaminC >= 51 && percentVitaminC <= 75) && controlFunction == 3)
 		{
 			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
 			heartControl.velocityBeat = 1.2f;
 			controlFunction += 1;
-		}else if (percentWaterBottle >= 76 && controlFunction == 4)
+		}else if (percentVitaminC >= 76 && controlFunction == 4)
 		{
 			HeartControl heartControl = Heart.GetComponent<HeartControl> ();
 			heartControl.velocityBeat = 1.5f;
