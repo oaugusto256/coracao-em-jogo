@@ -18,6 +18,7 @@ public class ObjectPool : MonoBehaviour {
 		spawnCycle = Random.Range(1, 4);
 
 		objectList = new GameObject[poolSize];
+
 		for (int i = 0; i < poolSize; i++) 
 		{
 			objectList [i] = Instantiate (objectToPool);
@@ -40,7 +41,7 @@ public class ObjectPool : MonoBehaviour {
 	public void activateObject() 
 	{ 
 		for (int i = 0; i < poolSize; i++) 
-		{
+		{ 
 			if (!objectList [i].activeInHierarchy) 
 			{
 				objectList [i].SetActive (true);

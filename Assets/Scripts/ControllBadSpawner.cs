@@ -30,7 +30,7 @@ public class ControllBadSpawner : MonoBehaviour {
 		{	
 
 			ObjectPool objectPool = listOfSpawner [afectedSpawner].GetComponent<ObjectPool>();
-			objectPool.poolSize = 5;
+			objectPool.poolSize = 1;
 			afectedSpawner = Random.Range (0, 5);
 			desactiveObject (afectedSpawner);
 			spawCicle = Random.Range (0, 3);
