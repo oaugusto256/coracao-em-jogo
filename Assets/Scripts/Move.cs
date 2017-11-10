@@ -10,7 +10,7 @@ public class Move : MonoBehaviour
 
 	void Update ()
 	{
-		speed = Random.Range (5,20);
+		speed = Random.Range (1,23);
 
 		if (Time.timeScale != 0) 
 		{
