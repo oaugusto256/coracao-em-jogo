@@ -17,7 +17,7 @@ public class PointsManager : MonoBehaviour {
     public GameObject HealthBar;
 	public GameObject Heart;
 	public GameObject UIManager;
- 	 public AudioSource run;
+ 	public AudioSource run;
     public AudioSource hitGoodThing;
     public AudioSource hitBadThing;
 	public float curHealth = 0f;
@@ -79,7 +79,6 @@ public class PointsManager : MonoBehaviour {
 		countDCO = 1;
 
 		controlFunction = 1;
-		
 	}
 
 	void Update () 
