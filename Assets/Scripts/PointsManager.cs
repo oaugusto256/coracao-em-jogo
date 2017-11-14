@@ -95,7 +95,7 @@ public class PointsManager : MonoBehaviour {
 				if(countCafeina < qntCafeina)
 				{
 					hitGoodThing.Play();
-					points += 1;
+					points += 5;
 					countCafeina +=1;
 				}
 				else if(countCafeina == qntCafeina)
@@ -103,7 +103,7 @@ public class PointsManager : MonoBehaviour {
 					if(cafeina == false)
 					{
 						hitGoodThing.Play();
-						points += 1;
+						points += 5;
 						cafeina = true;
 						countSpawner += 1;
 						verificaVitoria(countSpawner);
@@ -245,7 +245,7 @@ public class PointsManager : MonoBehaviour {
 				if(countDCO < qntDCO)
 				{
 					hitGoodThing.Play ();
-					points += 1;
+					points += 5;
 					countDCO += 1;
 				}
 				else if(countDCO == qntDCO)
