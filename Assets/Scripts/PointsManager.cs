@@ -100,10 +100,10 @@ public class PointsManager : MonoBehaviour {
 				}
 				else if(countCafeina == qntCafeina)
 				{
+					hitGoodThing.Play();
+					points += 5;
 					if(cafeina == false)
 					{
-						hitGoodThing.Play();
-						points += 5;
 						cafeina = true;
 						countSpawner += 1;
 						verificaVitoria(countSpawner);
@@ -121,10 +121,10 @@ public class PointsManager : MonoBehaviour {
 				}
 				else if( countWater == qntWater )
 				{
+					hitGoodThing.Play ();
+					points += 10;
 					if(agua == false)
 					{
-						hitGoodThing.Play ();
-						points += 10;
 						agua = true;
 						countSpawner += 1;
 						verificaVitoria(countSpawner);
@@ -142,10 +142,10 @@ public class PointsManager : MonoBehaviour {
 				}
 				else if(countAntidepressant == qntAntedrepessant)
 				{
+					hitGoodThing.Play();
+					points += 5;
 					if(antidepressant == false)
 					{
-						hitGoodThing.Play();
-						points += 5;
 						antidepressant = true;
 						countSpawner += 1;
 						verificaVitoria(countSpawner);
@@ -162,10 +162,10 @@ public class PointsManager : MonoBehaviour {
 				} 
 				else if(countMedicalEvaluation == qntMedicalEvaluation)
 				{ 
+					hitGoodThing.Play ();
+					points += 15;
 					if(medical == false)
 					{ 
-						hitGoodThing.Play ();
-						points += 15;
 						medical = true;
 						countSpawner += 1;
 						verificaVitoria(countSpawner);
@@ -186,10 +186,10 @@ public class PointsManager : MonoBehaviour {
 				} 
 				else if( countVitaminC == qntVitaminC )
 				{
+					hitGoodThing.Play ();
+					points += 10;
 					if(vitamina == false)
 					{
-						hitGoodThing.Play ();
-						points += 10;
 						controlHeartBeat (countVitaminC);
 						vitamina = true;
 						countSpawner += 1;
@@ -208,10 +208,10 @@ public class PointsManager : MonoBehaviour {
 				}
 				else if(countStrawberry == qntStrawberry)
 				{
+					hitGoodThing.Play ();
+					points += 15;
 					if(fruta == false)
 					{
-						hitGoodThing.Play ();
-						points += 15;
 						fruta = true;
 						countSpawner += 1;
 						verificaVitoria(countSpawner);
@@ -229,10 +229,10 @@ public class PointsManager : MonoBehaviour {
 				}
 				else if(countDumbell == qntDumbell)
 				{ 
+					hitGoodThing.Play ();
+					points += 25;
 					if(peso == false)
 					{
-						hitGoodThing.Play ();
-						points += 25;
 						peso = true;
 						countSpawner += 1;
 						verificaVitoria(countSpawner);
@@ -250,10 +250,10 @@ public class PointsManager : MonoBehaviour {
 				}
 				else if(countDCO == qntDCO)
 				{ 
+					hitGoodThing.Play ();
+					points += 5;
 					if(dco == false)
 					{
-						hitGoodThing.Play ();
-						points += 5;
 						dco = true;
 						countSpawner += 1;
 						verificaVitoria(countSpawner);
