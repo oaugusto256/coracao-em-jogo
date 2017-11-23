@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Move : MonoBehaviour 
 {
-	int speed;
+	float speed;
 	protected Vector3 movement;
 	bool gameIsPaused;
 
 	void Update ()
 	{
         // speed = Random.Range (0,20);
-        speed = 12;
+        speed = 30;
 
 		if (Time.timeScale != 0) 
 		{
-			movement = Vector3.left * (speed / 10) * speed * Time.fixedDeltaTime;
+			movement = Vector3.left *  speed * Time.deltaTime;
 			transform.Translate (movement, Space.World);
 		}
 
