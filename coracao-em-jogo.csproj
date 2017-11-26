@@ -85,6 +85,9 @@
     <Compile Include="Assets\Scripts\ConfigSounds.cs" />
     <Compile Include="Assets\Scripts\ControllBadSpawner.cs" />
     <Compile Include="Assets\Scripts\ControllVolume.cs" />
+    <Compile Include="Assets\Scripts\CountFatorFase1.cs" />
+    <Compile Include="Assets\Scripts\CountFatorFase2.cs" />
+    <Compile Include="Assets\Scripts\CountFatorFase3.cs" />
     <Compile Include="Assets\Scripts\DeactivateByCollision.cs" />
     <Compile Include="Assets\Scripts\DeactivateByDistance.cs" />
     <Compile Include="Assets\Scripts\FPSStatis.cs" />
