@@ -20,7 +20,7 @@ void OnCollisionEnter(Collision collision){
 			WaterTxt.text = "x" + CountWater; 
 
 			if( CountWater == 6)
-				WaterTxt.color = Color.red;
+				WaterTxt.color = Color.blue;
 		}
 
 		if(collision.gameObject.name == "Fruta(Clone)")
@@ -29,7 +29,7 @@ void OnCollisionEnter(Collision collision){
 			StrawberryTxt.text = "x" + CountStrawberry; 
 
 			if( CountStrawberry == 6)
-				StrawberryTxt.color = Color.red;
+				StrawberryTxt.color = Color.blue;
 		}
 
 		if(collision.gameObject.name == "VitaminaC(Clone)")
@@ -38,7 +38,7 @@ void OnCollisionEnter(Collision collision){
 			VitaminCTxt.text = "x" + CountVitaminC; 
 
 			if( CountVitaminC == 6)
-				VitaminCTxt.color = Color.red;
+				VitaminCTxt.color = Color.blue;
 		}
 	}
 }

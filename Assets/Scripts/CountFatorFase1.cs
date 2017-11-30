@@ -21,7 +21,7 @@ public class CountFatorFase1 : MonoBehaviour {
 			AntidepressantTxt.text = "x" + CountAntidepressant; 
 
 			if( CountAntidepressant == 4)
-				AntidepressantTxt.color = Color.red;
+				AntidepressantTxt.color = Color.blue;
 		}
 
 		if(collision.gameObject.name == "Cafeina(Clone)")
@@ -30,7 +30,7 @@ public class CountFatorFase1 : MonoBehaviour {
 			CafeineTxt.text = "x" + CountCafein; 
 
 			if( CountCafein == 5)
-				CafeineTxt.color = Color.red;
+				CafeineTxt.color = Color.blue;
 		}
 
 		if(collision.gameObject.name == "VitaminaC(Clone)")
@@ -39,7 +39,7 @@ public class CountFatorFase1 : MonoBehaviour {
 			VitaminCTxt.text = "x" + CountVitaminC; 
 
 			if( CountVitaminC == 6)
-				VitaminCTxt.color = Color.red;
+				VitaminCTxt.color = Color.blue;
 		}
 	}
 }
