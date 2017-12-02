@@ -104,6 +104,9 @@
     <Compile Include="Assets\Scripts\UILevelsManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Plugins\Android\proguard-user.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>
